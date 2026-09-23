@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Muqadas Nadeem | MET418 Web GIS Application</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="glow" id="glow"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#home">📍 Muqadas Nadeem</a>
+    <button class="ghost menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
+    <nav id="nav">
+      <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
+      <a href="#interests">Interests</a><a href="#map">My Map</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="ghost" id="themeBtn" aria-label="Switch theme">🌙</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
+      <div class="hero-text">
+        <p class="course">MET418 · Web GIS Application · Dr. Farooq Buzdar</p>
+        <h1>Hi, I'm Muqadas Nadeem.</h1>
+        <h2 class="typing">I love <span id="typed"></span><i class="caret"></i></h2>
+        <p class="lead">BS Remote Sensing and GIS student, Department of Meteorology, COMSATS University Islamabad.</p>
+        <a class="btn" href="#contact">Say hello</a>
+        <a class="btn alt" href="#map">Explore my map</a>
+      </div>
+      <div class="photo-wrap">
+        <img class="photo" src="profile.jpg" alt="Photo of Muqadas Nadeem" onerror="this.parentElement.style.display='none'">
+      </div>
+      <div class="coords" id="coords">Lat 33.6844 | Lon 73.0479</div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h2>About me</h2>
+      <p>I am Muqadas Nadeem from Rawalpindi, a BS Remote Sensing and GIS student in my 7th semester. I chose this field because maps and satellite images turn plain data into answers about the real world, such as weather, floods and how our cities grow. Besides GIS, I enjoy building websites, so I like to bring both together in Web GIS.</p>
+      <div class="grid facts">
+        <div class="card tilt c1"><small>Name</small><b>Muqadas Nadeem</b></div>
+        <div class="card tilt c2"><small>Program</small><b>BS Remote Sensing and GIS</b></div>
+        <div class="card tilt c3"><small>Semester</small><b>7th (in progress)</b></div>
+        <div class="card tilt c4"><small>Department</small><b>Meteorology</b></div>
+        <div class="card tilt c1"><small>University</small><b>COMSATS University Islamabad</b></div>
+        <div class="card tilt c2"><small>From</small><b>Rawalpindi</b></div>
+      </div>
+    </section>
+
+    <section id="education" class="reveal">
+      <h2>Educational background</h2>
+      <ol class="timeline">
+        <li><b>Present</b><span>BS Remote Sensing and GIS (7th semester), Department of Meteorology, COMSATS University Islamabad</span></li>
+        <li><b>Intermediate</b><span>ICS (Intermediate in Computer Science), Punjab College</span></li>
+        <li><b>Matriculation</b><span>House of Secondary Education School, Rawalpindi</span></li>
+      </ol>
+      <h3>Projects and achievements</h3>
+      <div class="grid">
+        <div class="card tilt c1">🌍 <b>Project</b><span>Personal Web GIS website (MET418)</span></div>
+        <div class="card tilt c2">📜 <b>Certificate</b><span>[add yours or delete this card]</span></div>
+        <div class="card tilt c3">🎤 <b>Workshop / Seminar</b><span>[add yours or delete this card]</span></div>
+      </div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h2>Skills</h2>
+      <div class="two-col">
+        <div>
+          <h3>Technical</h3>
+          <div class="bar" data-level="80"><span>Python <em>80%</em></span><i></i></div>
+          <div class="bar" data-level="80"><span>QGIS <em>80%</em></span><i></i></div>
+          <div class="bar" data-level="75"><span>ArcGIS <em>75%</em></span><i></i></div>
+          <div class="bar" data-level="75"><span>Remote Sensing <em>75%</em></span><i></i></div>
+          <div class="bar" data-level="80"><span>Web Development <em>80%</em></span><i></i></div>
+          <h3>Other tools</h3>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Chart.js</li><li>C</li><li>C++</li><li>Java</li></ul>
+        </div>
+        <div>
+          <h3>Soft skills</h3>
+          <ul class="chips"><li>Teamwork</li><li>Presentation</li><li>Time management</li><li>Problem solving</li><li>Communication</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests" class="reveal">
+      <h2>Interests and hobbies</h2>
+      <div class="two-col">
+        <div>
+          <h3>Interests</h3>
+          <p>I am interested in remote sensing, spatial analysis, weather and climate data, and building interactive web maps that anyone can open in a browser.</p>
+        </div>
+        <div>
+          <h3>Hobbies</h3>
+          <ul class="chips">
+            <li>💻 Web development</li><li>📚 Reading</li><li>🗺️ Exploring maps</li>
+            <li>🧘 Me-time and self-care</li><li>📝 Journaling</li><li>🌿 Quiet walks</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" class="reveal">
+      <h2>My map</h2>
+      <p>A small web GIS made with Leaflet. Click a marker or a place button.</p>
+      <div class="chips" id="places"></div>
+      <div id="leaflet" role="region" aria-label="Map of places that matter to me"></div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <div class="grid">
+        <a class="card tilt c2" href="mailto:muqadasnadeem143@gmail.com">✉️ <b>Email</b><span>muqadasnadeem143@gmail.com</span></a>
+        <a class="card tilt c3" href="https://www.linkedin.com/in/muqadas-nadeem-92808a326" target="_blank" rel="noopener">💼 <b>LinkedIn</b><span>Muqadas Nadeem</span></a>
+        <a class="card tilt c4" href="https://github.com/MuqadasNadeem202202010" target="_blank" rel="noopener">🐙 <b>GitHub</b><span>MuqadasNadeem202202010</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Muqadas Nadeem · COMSATS University Islamabad</footer>
+  <button class="totop" id="toTop" aria-label="Back to top">↑</button>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
