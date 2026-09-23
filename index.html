@@ -3,35 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Muqadas Nadeem | MET418 Web GIS Application</title>
+  <title>Muqadas Nadeem | Remote Sensing and GIS</title>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="progress" id="progress"></div>
-  <div class="glow" id="glow"></div>
 
   <header class="topbar">
-    <a class="brand" href="#home">📍 Muqadas Nadeem</a>
+    <a class="brand" href="#home">Muqadas Nadeem</a>
     <button class="ghost menu-btn" id="menuBtn" aria-expanded="false">Menu</button>
     <nav id="nav">
-      <a href="#about">About</a><a href="#education">Education</a><a href="#skills">Skills</a>
-      <a href="#interests">Interests</a><a href="#map">My Map</a><a href="#contact">Contact</a>
+      <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a>
+      <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#interests">Interests</a>
+      <a href="#map">Map</a><a href="#contact">Contact</a>
     </nav>
     <button class="ghost" id="themeBtn" aria-label="Switch theme">🌙</button>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span>
       <div class="hero-text">
         <p class="course">MET418 · Web GIS Application · Dr. Farooq Buzdar</p>
-        <h1>Hi, I'm Muqadas Nadeem.</h1>
-        <h2 class="typing">I love <span id="typed"></span><i class="caret"></i></h2>
+        <h1>Muqadas Nadeem</h1>
+        <h2 class="typing">I work with <span id="typed"></span><i class="caret"></i></h2>
         <p class="lead">BS Remote Sensing and GIS student, Department of Meteorology, COMSATS University Islamabad.</p>
-        <a class="btn" href="#contact">Say hello</a>
-        <a class="btn alt" href="#map">Explore my map</a>
+        <a class="btn" href="#projects">View my projects</a>
+        <a class="btn alt" href="#contact">Contact me</a>
       </div>
       <div class="photo-wrap">
         <img class="photo" src="profile.jpg" alt="Photo of Muqadas Nadeem" onerror="this.parentElement.style.display='none'">
@@ -42,13 +41,13 @@
     <section id="about" class="reveal">
       <h2>About me</h2>
       <p>I am Muqadas Nadeem from Rawalpindi, a BS Remote Sensing and GIS student in my 7th semester. I chose this field because maps and satellite images turn plain data into answers about the real world, such as weather, floods and how our cities grow. Besides GIS, I enjoy building websites, so I like to bring both together in Web GIS.</p>
-      <div class="grid facts">
-        <div class="card tilt c1"><small>Name</small><b>Muqadas Nadeem</b></div>
-        <div class="card tilt c2"><small>Program</small><b>BS Remote Sensing and GIS</b></div>
-        <div class="card tilt c3"><small>Semester</small><b>7th (in progress)</b></div>
-        <div class="card tilt c4"><small>Department</small><b>Meteorology</b></div>
-        <div class="card tilt c1"><small>University</small><b>COMSATS University Islamabad</b></div>
-        <div class="card tilt c2"><small>From</small><b>Rawalpindi</b></div>
+      <div class="grid">
+        <div class="card"><small>Name</small><b>Muqadas Nadeem</b></div>
+        <div class="card"><small>Program</small><b>BS Remote Sensing and GIS</b></div>
+        <div class="card"><small>Semester</small><b>7th (in progress)</b></div>
+        <div class="card"><small>Department</small><b>Meteorology</b></div>
+        <div class="card"><small>University</small><b>COMSATS University Islamabad</b></div>
+        <div class="card"><small>From</small><b>Rawalpindi</b></div>
       </div>
     </section>
 
@@ -59,12 +58,34 @@
         <li><b>Intermediate</b><span>ICS (Intermediate in Computer Science), Punjab College</span></li>
         <li><b>Matriculation</b><span>House of Secondary Education School, Rawalpindi</span></li>
       </ol>
-      <h3>Projects and achievements</h3>
-      <div class="grid">
-        <div class="card tilt c1">🌍 <b>Project</b><span>Personal Web GIS website (MET418)</span></div>
-        <div class="card tilt c2">📜 <b>Certificate</b><span>[add yours or delete this card]</span></div>
-        <div class="card tilt c3">🎤 <b>Workshop / Seminar</b><span>[add yours or delete this card]</span></div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <h2>Experience and certificates</h2>
+      <ol class="timeline">
+        <li><b>12 to 31 August 2024</b><span><strong>Internship, Metavystic Private Limited</strong><br>Three-week internship. Worked with HTML, CSS, JavaScript (beginner), TURF.js (beginner), cadastral mapping, geospatial analysis and project workflows.</span></li>
+        <li><b>Six-week internship</b><span><strong>Internship, TechGIS (Pvt) Ltd, Islamabad</strong><br>Geospatial data collection, remote sensing tools, data cleaning and validation, georeferencing, digitization and editing, ArcMap tools, AI applications in GIS/RS, mapping and visualization, weather forecasting.</span></li>
+        <li><b>27 December 2023</b><span><strong>Workshop, Department of Meteorology, COMSATS University Islamabad</strong><br>One-day training workshop: Geospatial Techniques to understand the Urban Architecture and Planning.</span></li>
+      </ol>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h2>Projects</h2>
+      <div class="grid wide">
+        <article class="card project">
+          <h3>GeoSense AI</h3>
+          <p>A web application I built and deployed online. Replace this line with one sentence about what it does.</p>
+          <ul class="chips"><li>Web app</li><li>GIS</li><li>AI</li></ul>
+          <a class="btn small" href="https://geosense-ai-pi.vercel.app/" target="_blank" rel="noopener">Open live project</a>
+        </article>
+        <article class="card project">
+          <h3>LuxeCart AI</h3>
+          <p>A web application I built and deployed online. Replace this line with one sentence about what it does.</p>
+          <ul class="chips"><li>Web app</li><li>E-commerce</li><li>AI</li></ul>
+          <a class="btn small" href="https://luxe-cart-ai.vercel.app/" target="_blank" rel="noopener">Open live project</a>
+        </article>
       </div>
+      <p class="note">More of my work is on <a href="https://github.com/MuqadasNadeem202202010" target="_blank" rel="noopener">GitHub</a>.</p>
     </section>
 
     <section id="skills" class="reveal">
@@ -78,7 +99,7 @@
           <div class="bar" data-level="75"><span>Remote Sensing <em>75%</em></span><i></i></div>
           <div class="bar" data-level="80"><span>Web Development <em>80%</em></span><i></i></div>
           <h3>Other tools</h3>
-          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Chart.js</li><li>C</li><li>C++</li><li>Java</li></ul>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TURF.js</li><li>Tailwind CSS</li><li>Bootstrap</li><li>Chart.js</li><li>C</li><li>C++</li><li>Java</li></ul>
         </div>
         <div>
           <h3>Soft skills</h3>
@@ -97,8 +118,8 @@
         <div>
           <h3>Hobbies</h3>
           <ul class="chips">
-            <li>💻 Web development</li><li>📚 Reading</li><li>🗺️ Exploring maps</li>
-            <li>🧘 Me-time and self-care</li><li>📝 Journaling</li><li>🌿 Quiet walks</li>
+            <li>Web development</li><li>Reading</li><li>Exploring maps</li>
+            <li>Me-time and self-care</li><li>Journaling</li><li>Quiet walks</li>
           </ul>
         </div>
       </div>
@@ -114,9 +135,9 @@
     <section id="contact" class="reveal">
       <h2>Contact</h2>
       <div class="grid">
-        <a class="card tilt c2" href="mailto:muqadasnadeem143@gmail.com">✉️ <b>Email</b><span>muqadasnadeem143@gmail.com</span></a>
-        <a class="card tilt c3" href="https://www.linkedin.com/in/muqadas-nadeem-92808a326" target="_blank" rel="noopener">💼 <b>LinkedIn</b><span>Muqadas Nadeem</span></a>
-        <a class="card tilt c4" href="https://github.com/MuqadasNadeem202202010" target="_blank" rel="noopener">🐙 <b>GitHub</b><span>MuqadasNadeem202202010</span></a>
+        <a class="card" href="mailto:muqadasnadeem143@gmail.com"><small>Email</small><b>muqadasnadeem143@gmail.com</b></a>
+        <a class="card" href="https://www.linkedin.com/in/muqadas-nadeem-92808a326" target="_blank" rel="noopener"><small>LinkedIn</small><b>Muqadas Nadeem</b></a>
+        <a class="card" href="https://github.com/MuqadasNadeem202202010" target="_blank" rel="noopener"><small>GitHub</small><b>MuqadasNadeem202202010</b></a>
       </div>
     </section>
   </main>

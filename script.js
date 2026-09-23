@@ -22,7 +22,7 @@ hero.addEventListener('mousemove', e => {
 });
 
 // Typing effect
-const words = ['maps 🗺️', 'remote sensing 🛰️', 'Python 🐍', 'web GIS 🌍'];
+const words = ['spatial data', 'remote sensing', 'Python', 'web GIS', 'clean web design'];
 let w = 0, c = 0, del = false;
 (function type(){
   const word = words[w], el = $('#typed');
@@ -35,7 +35,7 @@ let w = 0, c = 0, del = false;
 // Reveal sections + skill bars
 const io = new IntersectionObserver(items => items.forEach(i => {
   if (i.isIntersecting) { i.target.classList.add(i.target.classList.contains('bar') ? 'on' : 'in'); io.unobserve(i.target); }
-}), {threshold:.2});
+}), {threshold:.15});
 document.querySelectorAll('.reveal,.bar').forEach(el => {
   if (el.dataset.level) el.querySelector('i').style.setProperty('--w', el.dataset.level + '%');
   io.observe(el);
@@ -48,17 +48,6 @@ addEventListener('scroll', () => {
   $('#toTop').classList.toggle('show', scrollY > 500);
 });
 $('#toTop').onclick = () => scrollTo({top:0});
-
-// Cursor glow + 3D tilt on cards
-addEventListener('mousemove', e => { const g = $('#glow'); g.style.left = e.clientX + 'px'; g.style.top = e.clientY + 'px'; });
-document.querySelectorAll('.tilt').forEach(card => {
-  card.addEventListener('mousemove', e => {
-    const r = card.getBoundingClientRect();
-    const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
-    card.style.transform = `perspective(600px) rotateX(${-y * 12}deg) rotateY(${x * 12}deg) translateY(-6px)`;
-  });
-  card.addEventListener('mouseleave', () => card.style.transform = '');
-});
 
 // Leaflet map (change names and coordinates)
 if (window.L) {
@@ -73,7 +62,7 @@ if (window.L) {
   ].forEach(p => {
     const m = L.marker([p[0], p[1]]).addTo(map).bindPopup(`<b>${p[2]}</b><br>${p[3]}`);
     const b = document.createElement('button');
-    b.textContent = '📍 ' + p[2];
+    b.textContent = p[2];
     b.onclick = () => { map.flyTo([p[0], p[1]], 13, {duration:1.5}); m.openPopup(); };
     $('#places').appendChild(b);
   });
