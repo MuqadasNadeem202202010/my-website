@@ -49,6 +49,19 @@ addEventListener('scroll', () => {
 });
 $('#toTop').onclick = () => scrollTo({top:0});
 
+// Certificate lightbox
+const lb = document.createElement('div');
+lb.id = 'lightbox';
+lb.innerHTML = '<img alt="">';
+document.body.appendChild(lb);
+document.querySelectorAll('.cert img').forEach(im => im.onclick = () => {
+  const big = lb.querySelector('img');
+  big.src = im.src; big.alt = im.alt;
+  lb.classList.add('open');
+});
+lb.onclick = () => lb.classList.remove('open');
+addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('open'); });
+
 // Leaflet map (change names and coordinates)
 if (window.L) {
   const map = L.map('leaflet').setView([33.68, 73.08], 10);

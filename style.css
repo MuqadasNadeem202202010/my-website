@@ -87,6 +87,17 @@ footer{text-align:center;color:var(--muted);padding:3rem 1rem 2rem}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
 .reveal.in{opacity:1;transform:none}
 
+/* certificates gallery */
+.certs{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+.cert{margin:0;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:transform .25s,box-shadow .25s}
+.cert:hover{transform:translateY(-5px);box-shadow:0 14px 28px rgba(13,33,55,.14)}
+.cert img{display:block;width:100%;height:220px;object-fit:contain;background:var(--line);cursor:zoom-in}
+.cert figcaption{padding:.7rem 1rem;font-weight:700;font-size:.95rem}
+.cert figcaption small{display:block;color:var(--muted);font-weight:400}
+#lightbox{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;padding:1rem;cursor:zoom-out}
+#lightbox.open{display:flex}
+#lightbox img{max-width:100%;max-height:100%;border-radius:8px}
+
 @media (max-width:900px){
   .menu-btn{display:block}
   nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--bg);padding:1rem 1.2rem;border-bottom:1px solid var(--line)}
